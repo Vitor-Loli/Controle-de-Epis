@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de EPIs</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="header">
+        <img src="assets/images/Lindóia Sistemas (1) (1).png" alt="" onclick="loadpage('inicio.html')">
+        <div class="menu">
+            <ul>
+                <li>
+                    <i class='bx bxs-briefcase' onclick="loadpage('colaboradores.html')"></i>
+                    <span class="infos">Colaboradores</span>
+                </li>
+                <li>
+                    <i class='bx bxs-hard-hat'></i>
+                    <span class="infos">EPIs</span>
+                </li>
+                <li>
+                    <i class='bx bxs-spreadsheet'></i>
+                    <span class="infos">Estoque</span>
+                </li>
+                <li>
+                    <i class='bx bxs-user-plus'></i>
+                    <span class="infos">Novo Usuário</span>
+                </li>
+            </ul>
+        </div>
+        <div class="exit">
+            <ul>
+                <li>
+                    <i class='bx bxs-exit' ></i>
+                    <span class="infos">Sair</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main" id="main">
+            <h1>Bem vindo ao Controle de EPIs</h1>
+            <h1>O que podemos fazer por você hoje?</h1>
+            <h3>Lindóia Sistemas</h3>
+    </div>
+
+    <div class="footer">
+        <h3>Made by Vitor Loli</h3>
+    </div>
+</body>
+
+<script>
+    function loadpage(tela){
+        fetch(tela)
+            .then(Response => Response.text())
+            .then(html => {
+                document.getElementById("main").innerHTML = html;
+            })
+            .catch(error => console.error("Erro ao carregar a página:", error));
+   };
+</script>
+</html>
