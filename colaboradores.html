@@ -12,7 +12,7 @@
     <div class="main" id="main">
         <h1>Cadastro de Colaboradores</h1>
         <div class="total-group">
-            <form action="">
+            <form  method="post">
                 <div class="group-box">
                     <label for="id_colaborador">ID</label>
                     <input type="text" id="id_colaborador" value="NOVO" readonly>
@@ -35,7 +35,7 @@
                 </div>
     
                 <div class="button-box">
-                    <input type="submit" value="Salvar" class="salvar">
+                    <input type="button" value="Salvar" class="salvar" onclick="mensagem()">
                     <input type="button" value="Cancelar" class="cancelar">
                 </div>    
                 
@@ -127,4 +127,12 @@
         </div>
     </div>
 </body>
+
+<script>
+    function mensagem(){
+        var nome_colaborador = document.getElementById("nome_colaborador");
+
+        console.log(nome_colaborador);
+    }
+</script>
 </html>
